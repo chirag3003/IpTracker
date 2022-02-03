@@ -36,9 +36,7 @@ func Init(a *fiber.App) {
 			log.Println(err)
 		}
 		log.Println(record)
-		res, err := json.Marshal(homeRouteResponse{
-			"Chirag",
-		})
+		res, err := json.Marshal(record)
 		if err != nil {
 			fmt.Println(err)
 			return ctx.SendStatus(500)
